@@ -109,7 +109,7 @@ for i in sort_ello:
     if i[1]>0:
         recommend_ello.append(i)
 
-print('1. Buku bagus untuk Andi:')
+print('1. Top 5 book recommendation for Andi:')
 for i in range(0,5):
     if recommend_andi[i][0] not in andisuka:
         print('-',df_books['original_title'].iloc[recommend_andi[i][0]])
@@ -117,7 +117,7 @@ for i in range(0,5):
         i+=5
         print('-',df_books['original_title'].iloc[recommend_andi[i][0]])
 
-print('\n2. Buku bagus untuk Budi:')
+print('\n2. Top 5 book recommendation for Budi:')
 for i in range(0,5):
     if recommend_budi[i][0] not in budisuka:
         print('-',df_books['original_title'].iloc[recommend_budi[i][0]])
@@ -125,7 +125,7 @@ for i in range(0,5):
         i+=5
         print('-',df_books['original_title'].iloc[recommend_budi[i][0]])
 
-print('\n3. Buku bagus untuk Ciko:')
+print('\n3. Top 5 book recommendation for Ciko:')
 for i in range(0,5):
     if recommend_ciko[i][0] not in cikosuka:
         print('-',df_books['original_title'].iloc[recommend_ciko[i][0]])
@@ -133,7 +133,7 @@ for i in range(0,5):
         i+=5
         print('-',df_books['original_title'].iloc[recommend_ciko[i][0]])
 
-print('\n4. Buku bagus untuk Dedi:')
+print('\n4.Top 5 book recommendation for Dedi:')
 for i in range(0,5):
     if recommend_dedi[i][0] not in dedisuka:
         print('-',df_books['original_title'].iloc[recommend_dedi[i][0]])
@@ -141,16 +141,10 @@ for i in range(0,5):
         i+=5
         print('-',df_books['original_title'].iloc[recommend_dedi[i][0]])
 
-print('\n5. Buku bagus untuk Ello:')
+print('\n5.Top 5 book recommendation for Ello:')
 for i in range(0,5):
     if recommend_ello[i][0] not in ellosuka:
-        if str(df_books['original_title'].iloc[recommend_ello[i][0]])=='nan':
-            print('-',df_books['title'].iloc[recommend_ello[i][0]])
-        else:
-            print('-',df_books['original_title'].iloc[recommend_ello[i][0]])  
+        print('-',df_books['title'].iloc[recommend_ello[i][0]]) 
     else:
         i+=5
-        if str(df_books['original_title'].iloc[recommend_ello[i][0]])=='nan':
-            print('-',df_books['title'].iloc[recommend_ello[i][0]])
-        else:
-            print('-',df_books['original_title'].iloc[recommend_ello[i][0]]) 
+        print('-',df_books['title'].iloc[recommend_ello[i][0]])
